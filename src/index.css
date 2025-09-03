@@ -59,6 +59,8 @@ body {
 
 img {
   width: 14rem;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -256,4 +258,114 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+
+  .app-header {
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  img {
+    width: 12rem;
+  }
+
+  h1 {
+    font-size: 4.4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.1rem 2rem;
+  }
+
+  .progress {
+    font-size: 1.6rem;
+  }
+
+  .btn-ui,
+  .timer {
+    float: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.6rem;
+  }
+
+  .app-header {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  img {
+    width: 10rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .progress {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    padding: 1rem 1.6rem;
+  }
+
+  .btn-option:not([disabled]):hover {
+    transform: none;
+  }
+
+  .btn-ui,
+  .timer {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 1.2rem;
+  }
 }
