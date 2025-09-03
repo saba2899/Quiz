@@ -1,8 +1,10 @@
-export default function Loader() {
+import { t } from "../i18n";
+
+export default function Loader({ lang }) {
   return (
     <div className="loader-container">
       <div className="loader"></div>
-      <p>Loading questions...</p>
+      <p>{t("loading", lang)}</p>
     </div>
   );
 }

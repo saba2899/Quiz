@@ -369,3 +369,179 @@ progress {
     margin-top: 1.2rem;
   }
 }
+
+/* Language flag switch */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flag-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark);
+}
+
+.flag-btn.active {
+  outline: 2px solid var(--color-theme);
+}
+
+.flag-icon {
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* ===== Modern theme layer ===== */
+:root {
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.12);
+  --backdrop: blur(12px) saturate(140%);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --ring: 0 0 0 3px rgba(16, 152, 173, 0.35);
+
+  /* New palette */
+  --color-darkest: #0b1020;
+  --color-dark: #11182a;
+  --color-medium: #9aa4b2;
+  --color-light: #f7f9fc;
+  --color-theme: #6c7bff; /* indigo */
+  --color-accent: #ffb86c; /* peach */
+}
+
+body {
+  background: radial-gradient(1000px 600px at 10% 0%, #15203b 0%, #0b1020 60%),
+    radial-gradient(900px 600px at 90% 100%, #1a1336 0%, #0b1020 60%),
+    linear-gradient(180deg, #0b1020 0%, #0b1020 100%);
+}
+
+.app-header,
+.main,
+.error,
+.timer,
+.result {
+  background: var(--surface);
+  -webkit-backdrop-filter: var(--backdrop);
+  backdrop-filter: var(--backdrop);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--surface-strong);
+}
+
+.app-header {
+  padding: 1.2rem 1.6rem;
+  border-radius: 16px;
+}
+
+.main {
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+h1 {
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn:not([disabled]):hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.06)
+  );
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+/* Language flags refinement */
+.flag-btn {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Options */
+.options {
+  gap: 1.4rem;
+}
+
+.btn-option {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+.btn-option.correct {
+  background: linear-gradient(180deg, var(--color-theme), #5866ff);
+}
+
+.btn-option.wrong {
+  background: linear-gradient(180deg, var(--color-accent), #ff9f43);
+}
+
+/* Progress */
+.progress {
+  color: var(--color-light);
+}
+
+progress {
+  height: 14px;
+  border-radius: 999px;
+}
+
+::-webkit-progress-bar {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-progress-value {
+  background: linear-gradient(90deg, #6c7bff 0%, #7ad7ff 100%);
+}
+
+/* Timer */
+.timer {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Result / Highscore */
+.result {
+  background: linear-gradient(180deg, #5866ff, #6c7bff);
+}
+
+.highscore {
+  opacity: 0.9;
+}
+
+/* Loader color */
+.loader-container {
+  color: #cbd5e1;
+}

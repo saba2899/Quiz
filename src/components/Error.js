@@ -1,7 +1,9 @@
-function Error() {
+import { t } from "../i18n";
+
+function Error({ lang }) {
   return (
     <p className="error">
-      <span>💥</span> There was an error fecthing questions.
+      <span>💥</span> {t("error", lang)}
     </p>
   );
 }

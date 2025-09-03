@@ -1,10 +1,22 @@
-function Progress({ index, numQuestions, points, maxPossiblePoints, answer }) {
+import { t } from "../i18n";
+
+function Progress({
+  index,
+  numQuestions,
+  points,
+  maxPossiblePoints,
+  answer,
+  lang,
+}) {
   return (
     <header className="progress">
       <progress max={numQuestions} value={index + Number(answer !== null)} />
 
       <p>
-        Question <strong>{index + 1}</strong> / {numQuestions}
+        {t("questionProgress", lang, {
+          current: index + 1,
+          total: numQuestions,
+        })}
       </p>
 
       <p>

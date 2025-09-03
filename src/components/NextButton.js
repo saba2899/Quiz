@@ -1,4 +1,6 @@
-function NextButton({ dispatch, answer, index, numQuestions }) {
+import { t } from "../i18n";
+
+function NextButton({ dispatch, answer, index, numQuestions, lang }) {
   if (answer === null) return null;
   if (index < numQuestions - 1)
     return (
@@ -8,7 +10,7 @@ function NextButton({ dispatch, answer, index, numQuestions }) {
           dispatch({ type: "nextQuestion" });
         }}
       >
-        Next
+        {t("next", lang)}
       </button>
     );
   if (index === numQuestions - 1)
@@ -19,7 +21,7 @@ function NextButton({ dispatch, answer, index, numQuestions }) {
           dispatch({ type: "finish" });
         }}
       >
-        Finish
+        {t("finish", lang)}
       </button>
     );
 }

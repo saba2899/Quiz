@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useEffect, useReducer, useState } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -87,6 +87,7 @@ function reducer(state, action) {
 }
 
 function App() {
+  const [lang, setLang] = useState("ka");
   const [
     { questions, status, index, answer, points, highscore, secondsRemaining },
     dispatch,
@@ -98,22 +99,33 @@ function App() {
     0
   );
 
-  useEffect(function () {
-    fetch("/data/questions.json")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
-  }, []);
+  useEffect(
+    function () {
+      const url =
+        lang === "en" ? "/data/questions.en.json" : "/data/questions.json";
+      // Reset state to ready before loading new language data
+      dispatch({ type: "restart" });
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => dispatch({ type: "dataReceived", payload: data }))
+        .catch(() => dispatch({ type: "dataFailed" }));
+    },
+    [lang]
+  );
 
   return (
     <div className="app">
-      <Header />
+      <Header lang={lang} onChangeLang={setLang} />
 
       <Main className="main">
-        {status === "loading" && <Loader />}
-        {status === "error" && <Error />}
+        {status === "loading" && <Loader lang={lang} />}
+        {status === "error" && <Error lang={lang} />}
         {status === "ready" && (
-          <StartScreen numQuestions={numQuestions} dispatch={dispatch} />
+          <StartScreen
+            numQuestions={numQuestions}
+            dispatch={dispatch}
+            lang={lang}
+          />
         )}
         {status === "active" && (
           <>
@@ -123,6 +135,7 @@ function App() {
               points={points}
               maxPossiblePoints={maxPossiblePoints}
               answer={answer}
+              lang={lang}
             />
             <Question
               question={questions[index]}
@@ -136,6 +149,7 @@ function App() {
                 answer={answer}
                 numQuestions={numQuestions}
                 index={index}
+                lang={lang}
               />
             </Footer>
           </>
@@ -146,6 +160,7 @@ function App() {
             maxPossiblePoints={maxPossiblePoints}
             highscore={highscore}
             dispatch={dispatch}
+            lang={lang}
           />
         )}
       </Main>

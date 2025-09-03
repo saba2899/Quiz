@@ -1,13 +1,15 @@
-function StartScreen({ numQuestions, dispatch }) {
+import { pluralize, t } from "../i18n";
+
+function StartScreen({ numQuestions, dispatch, lang }) {
   return (
     <div className="start">
-      <h2>Welcome to The React Quiz</h2>
-      <h3>{numQuestions} question to Test your React master</h3>
+      <h2>{t("welcome", lang)}</h2>
+      <h3>{pluralize("welcomeSub", numQuestions, lang)}</h3>
       <button
         className="btn btn-ui"
         onClick={() => dispatch({ type: "start" })}
       >
-        Let's Start
+        {t("start", lang)}
       </button>
     </div>
   );

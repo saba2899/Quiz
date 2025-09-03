@@ -1,0 +1,117 @@
+[
+  {
+    "question": "Which ocean contains the Mariana Trench?",
+    "options": [
+      "Atlantic Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean",
+      "Indian Ocean"
+    ],
+    "correctOption": 2,
+    "points": 15
+  },
+  {
+    "question": "In which year did World War II end in Europe?",
+    "options": ["1943", "1944", "1945", "1946"],
+    "correctOption": 2,
+    "points": 15
+  },
+  {
+    "question": "Which element has the chemical symbol Ag?",
+    "options": ["Silver", "Gold", "Argon", "Antimony"],
+    "correctOption": 0,
+    "points": 10
+  },
+  {
+    "question": "Which city is the capital of Japan?",
+    "options": ["Kyoto", "Osaka", "Tokyo", "Nagoya"],
+    "correctOption": 2,
+    "points": 10
+  },
+  {
+    "question": "On which continent is the Sahara Desert located?",
+    "options": ["Asia", "Africa", "Australia", "South America"],
+    "correctOption": 1,
+    "points": 10
+  },
+  {
+    "question": "Who wrote the novel '1984'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "Arthur Conan Doyle",
+      "Ray Bradbury"
+    ],
+    "correctOption": 0,
+    "points": 15
+  },
+  {
+    "question": "Which gas is essential for human respiration?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+    "correctOption": 0,
+    "points": 10
+  },
+  {
+    "question": "Which empire built Machu Picchu?",
+    "options": [
+      "Maya Empire",
+      "Aztec Empire",
+      "Inca Empire",
+      "Elamite Kingdom"
+    ],
+    "correctOption": 2,
+    "points": 20
+  },
+  {
+    "question": "Which is the largest planet in the Solar System?",
+    "options": ["Jupiter", "Saturn", "Uranus", "Neptune"],
+    "correctOption": 0,
+    "points": 10
+  },
+  {
+    "question": "Which language has the most native speakers?",
+    "options": ["English", "Mandarin Chinese", "Hindi", "Spanish"],
+    "correctOption": 1,
+    "points": 20
+  },
+  {
+    "question": "Which artist painted 'The Starry Night'?",
+    "options": [
+      "Claude Monet",
+      "Pablo Picasso",
+      "Vincent van Gogh",
+      "Salvador Dalí"
+    ],
+    "correctOption": 2,
+    "points": 15
+  },
+  {
+    "question": "Which land did Christopher Columbus first reach in 1492?",
+    "options": ["USA", "Brazil", "The Bahamas", "Mexico"],
+    "correctOption": 2,
+    "points": 20
+  },
+  {
+    "question": "Which city is known as the 'Eternal City'?",
+    "options": ["Athens", "Rome", "Cairo", "Istanbul"],
+    "correctOption": 1,
+    "points": 10
+  },
+  {
+    "question": "Which physicist proposed relativity and the famous equation E=mc²?",
+    "options": ["Isaac Newton", "Niels Bohr", "Albert Einstein", "Marie Curie"],
+    "correctOption": 2,
+    "points": 15
+  },
+  {
+    "question": "Who composed the opera 'The Magic Flute'?",
+    "options": [
+      "Wolfgang Amadeus Mozart",
+      "Ludwig van Beethoven",
+      "Giuseppe Verdi",
+      "Richard Wagner"
+    ],
+    "correctOption": 0,
+    "points": 20
+  }
+]
